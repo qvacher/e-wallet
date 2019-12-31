@@ -71,7 +71,7 @@ export default {
         { title: 'Dashboard', icon: 'insert_chart', route: '/dashboard' },
         { title: 'Cards', icon: 'credit_card', route: '/cards' }
       ],
-      mini: true
+      mini: false
     }
   }
 }
