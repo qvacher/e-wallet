@@ -26,6 +26,16 @@
                     delete
                   </v-icon>
                 </v-btn>
+                <v-btn
+                  @click="$emit('details-card', code)"
+                  icon
+                  flat
+                  dark
+                >
+                  <v-icon>
+                    visibility
+                  </v-icon>
+                </v-btn>
               </v-card-text>
             </div>
         </v-card>

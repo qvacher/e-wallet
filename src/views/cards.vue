@@ -12,6 +12,7 @@
                 :owner='card.owner'
                 :code='card.code'
                 @delete-card="deleteCard($event)"
+                @details-card="detailsCard($event)"
             />
             <v-flex xs12 sm6 md6 lg3 xl3 class='pa-3'>
                 <v-btn class='card__add' @click.stop="dialog = true">
@@ -61,6 +62,9 @@ export default {
     },
     deleteCard (code) {
       this.cards.splice(this.cards.indexOf(this.cards.find(function (card) { return card.code === code })), 1)
+    },
+    detailsCard (code) {
+      this.cards.indexOf(this.cards.find(function (card) { return card.code === code }))
     }
   }
 }
