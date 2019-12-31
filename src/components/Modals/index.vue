@@ -26,13 +26,14 @@
         <v-card-text class="pt-0">
           <v-layout row wrap>
             <v-flex xs12 sm12 md6 lg3 xl3 class='pa-3'>
-              <v-card class='card'>
+              <v-card class='card card__form'>
                 <v-card-title>
                   <h3 v-if='amount' class="grey--text card__amount">{{ amount }} €</h3>
                   <h3 v-else class="grey--text card__amount"><pre>-</pre></h3>
                   <h2 class='font-weight-light card__title'><pre>{{ title }}</pre></h2>
                 </v-card-title>
                 <v-card-text>
+                  <v-icon class="grey--text card__barcode mb-4">fa-barcode</v-icon>
                   <pre class="card__code">{{ fCode }}</pre>
                   <pre class="card__owner">{{ owner }}</pre>
                 </v-card-text>

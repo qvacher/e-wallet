@@ -15,6 +15,7 @@
 import router from '@/router'
 import vuetify from '@/plugins/vuetify'
 
+import '@fortawesome/fontawesome-free/css/all.css';
 import Navbar from '@/components/Navbar'
 
 export default {

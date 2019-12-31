@@ -12,10 +12,16 @@
     text-transform: uppercase;
   }
 
+  &__barcode{
+    font-size: 100px;
+    overflow: hidden;
+    height: 40px;
+  }
+
   &__code{
     font-size: 18px;
     color: $grey;
-    text-align: left;
+    text-align: center;
   }
 
   &__amount{
@@ -24,7 +30,7 @@
   }
 
   &__owner{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom:0;
     font-size: 16px;
     text-align: left;
@@ -37,7 +43,7 @@
     border-radius: 10px;
     color: $grey-darken !important;
     width: 100%;
-    height: 186px;
+    height: 215px;
     font-weight: bold;
     border: 2px dashed;
     border-color: $grey-darken !important;
@@ -48,12 +54,16 @@
       color: $grey !important;
     }
   }
+
+  &__form{
+     background-color: $blue-darken !important; 
+  }
 }
 
 /* FLIP CARD FEATURE */
 .flip-card {
   width: 100%;
-  height: 186px;
+  height: 215px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
