@@ -1,0 +1,36 @@
+@require '../colors.styl'
+
+.transaction {
+    background-color: $blue-darken !important;
+    border-radius: 10px;
+
+    .v-card__text{
+        display: flex;
+        align-items: center;
+
+        .v-icon{
+            font-size: 15px;    
+        }
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: lighter;
+    }
+    &__amount{
+        display: inline-block;
+        &-credit{
+            font-size: 20px;
+            font-weight: lighter;
+            color: $green;
+        }
+        &-debit{
+            font-size: 20px;
+            font-weight: lighter;
+            color: $red;
+        }
+        &-devise{
+            font-size: 14px;
+        }
+    }
+}
