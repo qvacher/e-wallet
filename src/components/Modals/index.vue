@@ -23,9 +23,9 @@
           </v-btn>
         </v-card-title>
 
-        <v-card-text class="pt-0">
+        <v-card-text class="py-0">
           <v-layout row wrap>
-            <v-flex xs12 sm12 md6 lg3 xl3 class='pa-3'>
+            <v-flex xs12 sm12 md6 lg3 xl3 class='pa-3 d-flex'>
               <v-card class='card card__form'>
                 <v-card-title>
                   <h3 v-if='amount' class="grey--text card__amount">{{ amount }} €</h3>
@@ -42,7 +42,7 @@
             <v-flex xs12 sm12 md6 lg6 xl6 class='pa-3'>
               <v-form ref="form">
                 <v-layout row class="pb-1">
-                  <v-flex>
+                  <v-flex md8 sm12 xs12>
                     <v-text-field
                       v-model="title"
                       label="Card title"
@@ -53,7 +53,7 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row class="pb-1">
-                  <v-flex>
+                  <v-flex md8 sm12 xs12>
                     <v-text-field
                       v-model="code"
                       label="Card number"
@@ -65,10 +65,21 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row class="pb-1">
-                  <v-flex>
+                  <v-flex md8 sm12 xs12>
                     <v-text-field
                       v-model="amount"
                       label="Amount"
+                      outline
+                      hide-details
+                      class="grey--input"
+                    />
+                  </v-flex>
+                </v-layout>
+                <v-layout row>
+                  <v-flex md8 sm12 xs12>
+                    <v-text-field
+                      v-model="owner"
+                      label="Owner"
                       outline
                       hide-details
                       class="grey--input"
@@ -106,7 +117,7 @@ export default {
       title: '',
       amount: '',
       code: '',
-      owner: 'Quentin Vacher',
+      owner: '',
       card: {}
     }
   },
