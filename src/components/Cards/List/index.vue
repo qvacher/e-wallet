@@ -44,13 +44,9 @@
 </template>
 
 <script>
-import Card from '@/components/Cards'
-
 export default {
   name: 'Cards',
-  components: {
-    Card
-  },
+  components: {},
   props: {
     title: {type: String, default: null},
     amount: {type: String, default: null},
