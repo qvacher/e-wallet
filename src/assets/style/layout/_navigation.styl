@@ -1,0 +1,50 @@
+@require '../colors.styl'
+
+aside, nav{
+  background-color: $blue !important;
+}
+
+.v-navigation-drawer--mini-variant{
+  .nav__title{
+    display: none;
+  }
+  .v-list__tile{
+      padding: 0 0 0 11px !important;
+  }
+}
+.nav__title{
+  color: $grey-darken;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 24px;
+}
+.nav__container{
+  margin-top: 80px;
+}
+.nav_link {
+  text-decoration: none;
+  .v-list__tile{
+      padding: 0 0 0 24px;
+      font-size: 16px !important;
+      color: $grey !important;
+      
+      &:not(.v-list__tile--avatar){
+        height : 60px;
+      }
+    .v-icon{
+      color: $grey !important;
+    }
+  }
+}
+.router-link-active {
+  .v-list__tile{
+    background-color: $blue-active !important;
+  }
+}
+
+.v-badge--overlap .v-badge__badge {
+  top: 10px;
+  right: 10px;
+  height : 10px
+  width: 10px;  
+}
