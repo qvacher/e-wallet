@@ -1,0 +1,34 @@
+@require '../colors.styl'
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: $red;
+  opacity: 0.2;
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.dot-selected {
+  opacity: 0.7;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: $red;
+  outline-offset: 3px;
+  -moz-outline-radius: 100%;
+  cursor: default;
+}
+
+.indicator-btn {
+  position: absolute;
+  left: 0px;
+  padding: 0px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}

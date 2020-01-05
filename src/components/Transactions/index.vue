@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 class="pa-2">
+  <v-flex xs8 class="pa-2">
     <v-card class="transaction">
       <v-card-text>
         <v-avatar size="40px" color="#D64158" class="mr-4">

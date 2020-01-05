@@ -1,5 +1,5 @@
 <template>
-  <transition name="list" mode="out-in">
+  <transition name="list" mode="out-in" appear>
     <v-layout column v-if="!detailedView" key="list">
       <v-layout row>
         <h1 class="font-weight-light grey--text pl-3 mb-4">Cards</h1>
@@ -28,27 +28,12 @@
       <v-layout row>
         <h1 class="font-weight-light grey--text pl-3 mb-4">Details</h1>
       </v-layout>
-      <v-layout row class="justify--content-center">
-        <CardDetail
-          :key="selectedCard.code"
-          :title="selectedCard.title"
-          :amount="selectedCard.amount"
-          :owner="selectedCard.owner"
-          :code="selectedCard.code"
-        />
-      </v-layout>
-      <v-layout row class="justify--content-center">
-        <p>Pagination</p>
-      </v-layout>
-      <v-layout row wrap class="justify--content-center">
-        <Transaction
-          v-for="transaction in transactions"
-          :key="transaction.code"
-          :title="transaction.title"
-          :amount="transaction.amount"
-          :type="transaction.type"
-        />
-      </v-layout>
+      <Carousel
+        :cards="cards"
+        :transactions="transactions"
+        :currentCardIndex="currentCardIndex"
+        @load-transaction="loadTransactions($event)"
+      />
     </v-layout>
   </transition>
 </template>
@@ -56,16 +41,16 @@
 <script>
 import Card from "@/components/Cards/List";
 import CardDetail from "@/components/Cards/Detail";
+import Carousel from "@/components/Carousel";
 import Modal from "@/components/Modals";
-import Transaction from "@/components/Transactions";
 
 export default {
   name: "Cards",
   components: {
     Card,
     CardDetail,
-    Modal,
-    Transaction
+    Carousel,
+    Modal
   },
   props: {},
   data() {
@@ -116,11 +101,12 @@ export default {
       ],
       dialog: false,
       detailedView: false,
-      selectedCard: {},
+      currentCard: {},
+      currentCardIndex: 0,
       transactions: [
         {
-          title: "Paiement",
-          amount: "4",
+          title: "Payment",
+          amount: "4,00",
           type: "debit",
           code: "0491 1275 2176 0197"
         },
@@ -132,15 +118,27 @@ export default {
         },
         {
           title: "Credit from coupon",
-          amount: "4",
+          amount: "4,00",
           type: "credit",
-          code: "0491 1275 2176 0197"
+          code: "0491 1281 2172 0193"
         },
         {
           title: "Credit from promo",
           amount: "0,15",
           type: "credit",
           code: "0491 1275 2176 0197"
+        },
+        {
+          title: "Payment",
+          amount: "0,50",
+          type: "debit",
+          code: "0491 1275 2176 0197"
+        },
+        {
+          title: "Payment",
+          amount: "1,25",
+          type: "debit",
+          code: "0441 1294 2175 0196"
         }
       ]
     };
@@ -161,9 +159,14 @@ export default {
     },
     detailsCard(code) {
       this.detailedView = !this.detailedView;
-      this.selectedCard = this.cards.find(function(card) {
+      this.currentCard = this.cards.find(function(card) {
         return card.code === code;
       });
+      this.currentCardIndex = this.cards.indexOf(
+        this.cards.find(function(card) {
+          return card.code === code;
+        })
+      );
     }
   }
 };
