@@ -29,7 +29,7 @@
         :showElement="this.showElement"
       />
     </v-flex>
-    <transition-group name="transactions" tag="v-layout" appear>
+    <transition-group name="transactions" tag="v-layout" class="row wrap justify--content-center">
       <Transaction
         v-for="(transaction, index) in currentTransactions"
         :key="index"
@@ -37,7 +37,7 @@
         :amount="transaction.amount"
         :type="transaction.type"
       />
-    </transition-group>
+</transition-group>
   </v-layout>
 </template>
 <script>

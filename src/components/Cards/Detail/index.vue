@@ -1,5 +1,5 @@
 <template>
-    <v-flex xs12 sm6 md6 lg4 xl4 class='pa-3'>
+    <v-flex xs12 sm6 md6 lg3 xl3 class='pa-3'>
       <div class="flip-card">
         <v-card class='card flip-card-inner'>
             <div class="flip-card-front">

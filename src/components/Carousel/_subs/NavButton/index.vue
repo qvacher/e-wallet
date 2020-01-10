@@ -1,6 +1,6 @@
 <template>
   <button class="btn">
-    <v-icon>arrow_{{ arrowType }}</v-icon>
+    <v-icon class="white--text">arrow_{{ arrowType }}</v-icon>
   </button>
 </template>
 <script>

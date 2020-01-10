@@ -39,13 +39,13 @@
 </template>
 
 <script>
-import Card from "@/components/Cards/List";
-import CardDetail from "@/components/Cards/Detail";
-import Carousel from "@/components/Carousel";
-import Modal from "@/components/Modals";
+import Card from '@/components/Cards/List';
+import CardDetail from '@/components/Cards/Detail';
+import Carousel from '@/components/Carousel';
+import Modal from '@/components/Modals';
 
 export default {
-  name: "Cards",
+  name: 'Cards',
   components: {
     Card,
     CardDetail,
@@ -57,46 +57,46 @@ export default {
     return {
       cards: [
         {
-          title: "Auchan",
-          amount: "4,3",
-          owner: "Quentin Vacher",
-          code: "0491 1275 2176 0197"
+          title: 'Auchan',
+          amount: '4,3',
+          owner: 'Quentin Vacher',
+          code: '0491 1275 2176 0197'
         },
         {
-          title: "Casino",
-          amount: "8,7",
-          owner: "Quentin Vacher",
-          code: "0491 1281 2172 0193"
+          title: 'Casino',
+          amount: '8,7',
+          owner: 'Quentin Vacher',
+          code: '0491 1281 2172 0193'
         },
         {
-          title: "E-Leclerc",
-          amount: "0,67",
-          owner: "Quentin Vacher",
-          code: "0441 1294 2175 0196"
+          title: 'E-Leclerc',
+          amount: '0,67',
+          owner: 'Quentin Vacher',
+          code: '0441 1294 2175 0196'
         },
         {
-          title: "Feu Vert",
-          amount: "",
-          owner: "Quentin Vacher",
-          code: "0491 1294 2175 0196"
+          title: 'Feu Vert',
+          amount: '',
+          owner: 'Quentin Vacher',
+          code: '0491 1294 2175 0196'
         },
         {
-          title: "UGC",
-          amount: "",
-          owner: "Quentin Vacher",
-          code: "0491 1307 2178 0199"
+          title: 'UGC',
+          amount: '',
+          owner: 'Quentin Vacher',
+          code: '0491 1307 2178 0199'
         },
         {
-          title: "Gaumont Pathé",
-          amount: "",
-          owner: "Quentin Vacher",
-          code: "0491 1307 2174 0199"
+          title: 'Gaumont Pathé',
+          amount: '',
+          owner: 'Quentin Vacher',
+          code: '0491 1307 2174 0199'
         },
         {
-          title: "Midas",
-          amount: "",
-          owner: "Quentin Vacher",
-          code: "0492 1307 2178 0199"
+          title: 'Midas',
+          amount: '',
+          owner: 'Quentin Vacher',
+          code: '0492 1307 2178 0199'
         }
       ],
       dialog: false,
@@ -105,40 +105,40 @@ export default {
       currentCardIndex: 0,
       transactions: [
         {
-          title: "Payment",
-          amount: "4,00",
-          type: "debit",
-          code: "0491 1275 2176 0197"
+          title: 'Payment',
+          amount: '4,00',
+          type: 'debit',
+          code: '0491 1275 2176 0197'
         },
         {
-          title: "Credit from gift card",
-          amount: "4,15",
-          type: "credit",
-          code: "0491 1275 2176 0197"
+          title: 'Credit from gift card',
+          amount: '4,15',
+          type: 'credit',
+          code: '0491 1275 2176 0197'
         },
         {
-          title: "Credit from coupon",
-          amount: "4,00",
-          type: "credit",
-          code: "0491 1281 2172 0193"
+          title: 'Credit from coupon',
+          amount: '4,00',
+          type: 'credit',
+          code: '0491 1281 2172 0193'
         },
         {
-          title: "Credit from promo",
-          amount: "0,15",
-          type: "credit",
-          code: "0491 1275 2176 0197"
+          title: 'Credit from promo',
+          amount: '0,15',
+          type: 'credit',
+          code: '0491 1275 2176 0197'
         },
         {
-          title: "Payment",
-          amount: "0,50",
-          type: "debit",
-          code: "0491 1275 2176 0197"
+          title: 'Payment',
+          amount: '0,50',
+          type: 'debit',
+          code: '0491 1275 2176 0197'
         },
         {
-          title: "Payment",
-          amount: "1,25",
-          type: "debit",
-          code: "0441 1294 2175 0196"
+          title: 'Payment',
+          amount: '1,25',
+          type: 'debit',
+          code: '0441 1294 2175 0196'
         }
       ]
     };
